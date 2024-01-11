@@ -37,4 +37,12 @@ public Produit read(Long id) throws Exception {
 throw new Exception("Produit non trouve");
 }
 
+public void update(Produit produit) throws Exception {
+Produit prodExistant = read(produit.getId());
+validerProduit(produit);
+prodExistant.setNom(produit.getNom());
+prodExistant.setPrix(produit.getPrix());
+prodExistant.setQuantite(produit.getQuantite());
+}
+
 }
