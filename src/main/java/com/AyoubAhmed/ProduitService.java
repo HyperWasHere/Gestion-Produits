@@ -45,4 +45,9 @@ prodExistant.setPrix(produit.getPrix());
 prodExistant.setQuantite(produit.getQuantite());
 }
 
+public void delete(Long id) throws Exception {
+Produit produit = read(id);
+produits.remove(produit);
+}
+
 }
